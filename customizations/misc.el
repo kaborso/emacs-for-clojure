@@ -10,3 +10,13 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; clojure in *scratch* by default
+(setq initial-major-mode 'clojure-mode)
+
+;; switching buffers made easy
+(global-set-key (kbd "C-,") 'previous-multiframe-window)
+(global-set-key (kbd "C-.") 'next-multiframe-window)
+
+;;; unbind emacs suspension since it's easy to press accidentally
+(global-unset-key "\C-z")
